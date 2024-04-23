@@ -30,6 +30,23 @@ body {
     margin-top: 15px;
 }
 
+.tombol-menu {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  
+}
+
+.tombol-menu .garis {
+  height: 3px;
+  background-color: white;
+  
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -58,6 +75,38 @@ nav ul {
     color: rgb(255, 54, 131);
     border-bottom: 1px solid rgb(255, 255, 255);
   }
+
+  @media (max-width: 991.98px) {
+    
+    .wrapper {
+      width: 90%;
+    }
+  
+    nav ul {
+      display: none; 
+    }
+  
+    .tombol-menu {
+      display: flex; 
+    }
+  
+    nav ul.active { 
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      position: absolute; 
+      top: 100%;  
+      left: 0;
+      width: 100%;
+      background-color: rosybrown;
+      padding: 1rem;
+      left: 0;
+    }
+  
+    nav ul.active li a {
+      padding: 1rem;
+    }
+  }
   
 
   #Home {
@@ -72,9 +121,13 @@ nav ul {
     margin-bottom: 50px;
   }
 
-  #Blog {
-
+  #Contact {
+    margin: auto;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 230px;
   }
+
 
   .aboutme {
     margin-top: 200px;
@@ -214,32 +267,40 @@ nav ul {
     max-width: 35%;
 }
 
-#Contact {
-    padding: 50px 0px 50px 0px;
-    background-color:rosybrown
+
+.info {
+  text-align: center;
 }
 
-.footer{
-    width: 100%;
-    position: relative;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+.info h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.footer-section {
-    width: 20%;
-    margin: 0 auto;
-
+.info p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
 }
 
-.footer-section h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500px;
-    font-size: 35px;
-    margin-bottom: 5px;
-    color: rgb(255, 255, 255);
-    width: 100%;
-    line-height: 50px;
+.info p u a {
+  color: #ff7a7a;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.info p u a:hover {
+  color: #ff0062;
+  text-decoration: underline;
+}
+
+footer {
+  width: 125%;
+  background-color: rosybrown;
+  padding: 20px;
+  text-align: center;
+  transform: translateX(-13%);
+  color: #f9f9f9;
+}
+  
